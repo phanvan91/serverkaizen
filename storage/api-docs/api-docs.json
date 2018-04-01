@@ -1,0 +1,98 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "title": "L5 Swagger API",
+        "description": "L5 Swagger API description",
+        "contact": {
+            "email": "darius@matulionis.lt"
+        },
+        "version": "1.0.0"
+    },
+    "host": "192.168.1.113:8090",
+    "basePath": "/api/v1",
+    "schemes": [
+        "http",
+        "https"
+    ],
+    "paths": {
+        "/cong-ty/create": {
+            "post": {
+                "tags": [
+                    "cong_ties"
+                ],
+                "summary": "Create cong ty",
+                "description": "return cong ty object",
+                "operationId": "create",
+                "produces": [
+                    "application/json",
+                    "application/xml"
+                ],
+                "parameters": [
+                    {
+                        "name": "ma",
+                        "in": "path",
+                        "description": "Ma cong ty",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "ten",
+                        "in": "path",
+                        "description": "Ten cong ty",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "dia_chi",
+                        "in": "path",
+                        "description": "Dia chi cong ty",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "ma_so_thue",
+                        "in": "path",
+                        "description": "Ma so thue",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "dien_thoai",
+                        "in": "path",
+                        "description": "So dien thoai cua cong ty",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "to_chuc_id",
+                        "in": "path",
+                        "description": "Id cua to chuc",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "web",
+                        "in": "path",
+                        "description": "Website cua cong ty (null)",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    },
+                    "500": {
+                        "description": "Internal server error."
+                    }
+                },
+                "security": [
+                    {
+                        "api_key_security_example": []
+                    }
+                ]
+            }
+        }
+    },
+    "definitions": {}
+}
